@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { PaintbrushVertical } from 'lucide-vue-next'
 import Spaces from '@/components/Spaces.vue'
+import TimeDisplay from '@/components/Time/TimeDisplay.vue'
+import backgroundImage from '@/assets/background.jpg'
 </script>
 
 <template>
   <main
+    :style="{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }"
     class="min-h-screen w-full px-4 sm:px-6 lg:px-8 py-6 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white"
   >
     <!-- Header -->
@@ -38,7 +45,7 @@ import Spaces from '@/components/Spaces.vue'
           </template>
         </div>
       </div>
-      <aside class="w-full lg:w-1/3 bg-white/5 rounded-lg min-h-[200px] p-4">Sidebar</aside>
+      <aside class="w-full lg:w-1/3 bg-white/5 rounded-lg min-h-[200px] p-4"><TimeDisplay /></aside>
     </section>
 
     <!-- Footer -->
